@@ -110,7 +110,7 @@ wk.register(
 wk.register(
   {
     name = "key binding for Telescope",
-    ["<Leader>f"] = { ":Telescope find_files<CR>", noremap = true, "find file by name" },
+    ["<Leader>ff"] = { ":Telescope find_files<CR>", noremap = true, "find file by name" },
     ["<Leader>F"] = { ":Telescope live_grep<CR>", noremap = true, "grep file" },
     ["<Leader>r"] = { ":Telescope resume<CR>", noremap = true, "resume" },
     ["<Leader>o"] = { ":Telescope oldfiles<CR>", noremap = true, "resume" },
