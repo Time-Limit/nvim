@@ -240,6 +240,8 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities()
 require("lspconfig").lua_ls.setup({ capabilities = capabilities })
 -- 设置 CPP 的 LSP
 require("lspconfig").clangd.setup({ capabilities = capabilities })
+-- 设置 Python 的 LSP
+require("lspconfig").pyright.setup({ capabilities = capabilities })
 
 -- color scheme
 vim.cmd.colorscheme("base16-standardized-dark")
