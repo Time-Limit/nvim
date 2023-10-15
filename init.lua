@@ -102,8 +102,8 @@ wk.register(
     j = { [[v:count ? 'j' : 'gj']], noremap = true, expr = true, "move to the visual line below" },
     k = { [[v:count ? 'k' : 'gk']], noremap = true, expr = true, "move to the visual line above" },
 
-    ["<Leader>["] = { "<C-o>", noremap = true, "move to the previous position" },
-    ["<Leader>]"] = { "<C-i>", noremap = true, "move to the next position" },
+    ["<C-[>"] = { "<C-o>", noremap = true, "move to the previous position" },
+    ["<C-]>"] = { "<C-i>", noremap = true, "move to the next position" },
   }
 )
 
