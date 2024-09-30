@@ -1,14 +1,14 @@
 local vim = vim or {}     -- 防止 lsp 报错找不到 vim
 local set = vim.o
-set.clipboard = "unnamed" -- 复制到剪切板 待安装额外插件
+#set.clipboard = "unnamed" -- 复制到剪切板 待安装额外插件
 set.number = true         -- 显示行号
 set.relativenumber = true -- 显示相对行号
 set.cursorline = true     -- 高亮光标所在行
 
 set.autoindent = true     -- 新起一行时自动对齐缩进
 set.expandtab = true      -- 使用空格而非 Tab 进行缩进
-set.tabstop = 2           -- 用两个空格代替 Tab
-set.shiftwidth = 2        -- > 或者 < 时用两个空格缩进
+set.tabstop = 4           -- 用两个空格代替 Tab
+set.shiftwidth = 4        -- > 或者 < 时用两个空格缩进
 
 -- 高亮被复制的代码
 vim.api.nvim_create_autocmd({ "TextYankPost" }, {
@@ -244,6 +244,8 @@ require("lspconfig").clangd.setup({ capabilities = capabilities })
 require("lspconfig").pyright.setup({ capabilities = capabilities })
 -- 设置 Bash 的 LSP
 require("lspconfig").bashls.setup({ capabilities = capabilities })
+-- 设置 Bash 的 LSP
+require("lspconfig").biome.setup({ capabilities = capabilities })
 
 -- color scheme
 vim.cmd.colorscheme("base16-standardized-dark")
