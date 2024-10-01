@@ -241,11 +241,11 @@ require("lspconfig").lua_ls.setup({ capabilities = capabilities })
 -- 设置 CPP 的 LSP
 require("lspconfig").clangd.setup({ capabilities = capabilities })
 -- 设置 Python 的 LSP
-require("lspconfig").pyright.setup({ capabilities = capabilities })
+require("lspconfig").pylsp.setup({ capabilities = capabilities })
 -- 设置 Bash 的 LSP
 require("lspconfig").bashls.setup({ capabilities = capabilities })
--- 设置 Bash 的 LSP
-require("lspconfig").biome.setup({ capabilities = capabilities })
+-- 设置 typescript 的 LSP
+require("lspconfig").tsserver.setup({ capabilities = capabilities })
 
 -- color scheme
 vim.cmd.colorscheme("base16-standardized-dark")
