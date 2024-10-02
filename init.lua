@@ -245,7 +245,7 @@ require("lspconfig").pylsp.setup({ capabilities = capabilities })
 -- 设置 Bash 的 LSP
 require("lspconfig").bashls.setup({ capabilities = capabilities })
 -- 设置 typescript 的 LSP
-require("lspconfig").tsserver.setup({ capabilities = capabilities })
+require("lspconfig").ts_ls.setup({ capabilities = capabilities })
 
 -- color scheme
 vim.cmd.colorscheme("base16-standardized-dark")
