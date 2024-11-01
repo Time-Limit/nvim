@@ -20,6 +20,27 @@ vim.api.nvim_create_autocmd({ "TextYankPost" }, {
     end
 })
 
+-- 开启 VIM 时创建 sign
+vim.api.nvim_create_autocmd({ "VimEnter" }, {
+    pattern = { "*" },
+    callback = function()
+        local command = string.format(
+            "sign define %s text=%s texthl=%s linehl=%s",
+            "Congratulations", "🎉", "Congratulations", ""
+        )
+        -- 执行命令
+        vim.api.nvim_command(command)
+    end
+})
+vim.api.nvim_create_autocmd({ "CursorMoved" }, {
+    pattern = { "*" },
+    callback = function()
+        local row = vim.api.nvim_win_get_cursor(0)[1]
+        local command = string.format("sign place 200 name=Congratulations line=%d", row)
+        vim.api.nvim_command(command)
+    end
+})
+
 -- leader key
 vim.g.mapleader = " "
 
