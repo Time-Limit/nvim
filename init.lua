@@ -1,5 +1,6 @@
 local vim = vim or {} -- 防止 lsp 报错找不到 vim
 local set = vim.o
+set.termguicolors = true -- 使得 neovim 配色生效
 --set.clipboard = "unnamed" -- 复制到剪切板 待安装额外插件
 set.number = true         -- 显示行号
 set.relativenumber = true -- 显示相对行号
