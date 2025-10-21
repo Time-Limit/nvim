@@ -148,6 +148,38 @@ wk.register(
     }
 )
 
+wk.register(
+  {
+    name = "Gitsigns",
+    ["<Leader>hs"] = { ":Gitsigns preview_hunk<CR>", noremap = true, "preview hunk" },
+    ["<Leader>hn"] = { ":Gitsigns next_hunk<CR>", noremap = true, "goto next hunk" },
+    ["<Leader>hp"] = { ":Gitsigns prev_hunk<CR>", noremap = true, "goto prev hunk" },
+  }
+)
+
+wk.register(
+  {
+    name = "Diagnostic",
+    ["<Leader>dn"] = { ":lua vim.diagnostic.goto_next()<CR>", noremap = true, "goto next diagnostic" },
+    ["<Leader>dp"] = { ":lua vim.diagnostic.goto_prev()<CR>", noremap = true, "goto prev diagnostic" },
+  }
+)
+
+wk.register(
+  {
+    name = "Window Resize",
+    ["<Leader>whmax"] = { ":horizontal resize " .. math.floor(vim.o.lines) .. "<CR>", noremap = true, "max the current window in horizontal direction." },
+    ["<Leader>wvmax"] = { ":vertical resize " .. math.floor(vim.o.columns) .. "<CR>", noremap = true, "max the current window in vertical direction." },
+    ["<Leader>whmin"] = { ":horizontal resize " .. math.floor(vim.o.lines * 0.3) .. "<CR>", noremap = true, "min the current window in horizontal direction." },
+    ["<Leader>wvmin"] = { ":vertical resize " .. math.floor(vim.o.columns * 0.3) .. "<CR>", noremap = true, "min the current window in vertical direction." },
+    ["<Leader>wh+"] = { ":horizontal resize +10<CR>", noremap = true, "add horizontal size" },
+    ["<Leader>wh-"] = { ":horizontal resize -10<CR>", noremap = true, "sub horizontal size" },
+    ["<Leader>wv+"] = { ":vertical resize +10<CR>", noremap = true, "add vertical size" },
+    ["<Leader>wv-"] = { ":vertical resize -10<CR>", noremap = true, "sub vertical size" },
+    ["<Leader>w="] = { "<C-w>=", noremap = true, "resize all windows" },
+  }
+)
+
 -- 关闭 persistence 的自动保存状态
 vim.api.nvim_create_autocmd({ "VimEnter" }, {
     pattern = { "*" },
