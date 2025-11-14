@@ -292,12 +292,17 @@ cmp.setup.cmdline(':', {
     })
 })
 
+vim.filetype.add({
+    extension = {
+        t = "cuda"
+    }
+})
+
 -- Set up lspconfig.
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
 -- 设置 lua 的 LSP
 require("lspconfig").lua_ls.setup({ capabilities = capabilities })
--- 设置 CPP 的 LSP
-require("lspconfig").clangd.setup({ capabilities = capabilities })
 -- 设置 Python 的 LSP
 require("lspconfig").pylsp.setup({ capabilities = capabilities })
 -- 设置 Bash 的 LSP
@@ -306,6 +311,8 @@ require("lspconfig").bashls.setup({ capabilities = capabilities })
 require("lspconfig").ts_ls.setup({ capabilities = capabilities })
 -- 设置 json 的 LSP
 require("lspconfig").jsonls.setup({ capabilities = capabilities })
+-- 设置 CPP 的 LSP
+require("lspconfig").clangd.setup({ capabilities = capabilities })
 
 -- color scheme
 vim.cmd.colorscheme("base16-standardized-dark")
