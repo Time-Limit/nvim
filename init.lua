@@ -72,7 +72,9 @@ require("lazy").setup({
     { -- 在最左边提示修改
         "lewis6991/gitsigns.nvim",
         config = function()
-            require("gitsigns").setup()
+            require("gitsigns").setup({
+                current_line_blame = false, -- 默认关闭当前行 blame 提示
+            })
         end
     },
     { "folke/persistence.nvim", opts = { dir = vim.fn.expand(vim.fn.stdpath("state") .. "/sessions/") } }, -- 保存上一次退出的状态
@@ -154,6 +156,7 @@ wk.register(
     ["<Leader>hs"] = { ":Gitsigns preview_hunk<CR>", noremap = true, "preview hunk" },
     ["<Leader>hn"] = { ":Gitsigns next_hunk<CR>", noremap = true, "goto next hunk" },
     ["<Leader>hp"] = { ":Gitsigns prev_hunk<CR>", noremap = true, "goto prev hunk" },
+    ["<Leader>hb"] = { ":Gitsigns toggle_current_line_blame<CR>", noremap = true, silent = true, "toggle current line blame" },
   }
 )
 
