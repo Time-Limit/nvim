@@ -119,7 +119,7 @@ wk.register(
         ["<C-l>"] = { "<C-w>l", noremap = true, silent = true, "move to the split on the right" },
         ["<C-h>"] = { "<C-w>h", noremap = true, silent = true, "move to the split on the left" },
         ["<C-k>"] = { "<C-w>k", noremap = true, silent = true, "move to the split above" },
-        ["<C-j>"] = { "<C-w>k", noremap = true, silent = true, "move to the split below" },
+        ["<C-j>"] = { "<C-w>j", noremap = true, silent = true, "move to the split below" },
 
         j = { [[v:count ? 'j' : 'gj']], noremap = true, expr = true, "move to the visual line below" },
         k = { [[v:count ? 'k' : 'gk']], noremap = true, expr = true, "move to the visual line above" },
